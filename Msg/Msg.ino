@@ -1,3 +1,8 @@
+/*---------------------------------------------------------------------------------
+This code will send a message written at line 20
+to mobile number entered at line 30
+---------------------------------------------------------------------------------*/
+
 #include <SoftwareSerial.h>
 SoftwareSerial shield (7, 8); // RX, TX
 
@@ -12,7 +17,7 @@ void loop()
 {
   digitalWrite(13, LOW);
   delay(1000);
-  Serial.println("Sending Message through SIM900");
+  Serial.println("Sending Message through SIM800");
   delay(100);
   shield.println("AT+CMGF=1\r\n");
   delay(100);
@@ -22,7 +27,7 @@ void loop()
     Serial.write(shield.read());
   }
 
-  shield.println("AT+CMGS=\"0XXXXXXXXXX\"\r\n");
+  shield.println("AT+CMGS=\"0XXXXXXXXXX\"\r\n");  // Enter the mobile of intended recipient
   delay(1000);
   while (!(shield.available()));
   while (shield.available() > 0)
