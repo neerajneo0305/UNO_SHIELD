@@ -1,3 +1,12 @@
+/*----------------------------------------------------------------------------------
+This will print following data once the GPS has taken the fix.
+1- Time
+2- Date
+3- Speed
+4- Latitude
+5- Longitude
+----------------------------------------------------------------------------------*/
+
 #include "declaration.h"
 #include <SoftwareSerial.h>
 SoftwareSerial shield (7, 8); // RX, TX
