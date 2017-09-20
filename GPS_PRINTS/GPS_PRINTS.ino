@@ -1,3 +1,7 @@
+/*----------------------------------------------------------------------------
+This will print the burst data coming out from GPS module
+----------------------------------------------------------------------------*/
+
 #include <SoftwareSerial.h>
 SoftwareSerial shield (7, 8); // RX, TX
 
