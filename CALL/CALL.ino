@@ -1,3 +1,9 @@
+/*----------------------------------------------------------------------------------
+Place your SHIELD on UNO board.
+Enter the mobile no. at line 23 and upload the program.
+This will call to the number entered at line 223
+-----------------------------------------------------------------------------------*/
+
 #include <SoftwareSerial.h>
 SoftwareSerial shield (7, 8); // RX, TX
 
@@ -14,7 +20,7 @@ void loop()
   delay(1000);
   Serial.println("Calling through SIM900");
   delay(100);
-  shield.println("ATD0XXXXXXXXXX;\r\n");
+  shield.println("ATD0XXXXXXXXXX;\r\n");       // Enter the mobile number
   delay(5000);
   while (!(shield.available()));
   while (shield.available() > 0)
