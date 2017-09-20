@@ -1,4 +1,8 @@
-
+/*-------------------------------------------------------------------------------
+This is just a blink program to blink the 
+LED of ARDUINO UNO attached with pin 13.
+Do not place SHIELD for this program.
+-------------------------------------------------------------------------------*/
 void setup() 
 {
   pinMode(13, OUTPUT);
